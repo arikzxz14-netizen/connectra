@@ -1,0 +1,500 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 100px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+#cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('images/background.jpeg');
+    background-size: COVER;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    text-align: center;
+}
+
+.cover-content {
+    max-width: 600px;
+    padding: 20px;
+}
+
+.cover-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.cover-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+#enter-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#enter-btn:hover {
+    background-color: #d32f2f;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+header h1 {
+    margin: 0;
+}
+
+#top-nav {
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+#top-nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+#top-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.city-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+}
+
+.city-thumb {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+    max-width: 300px;
+}
+
+.city-thumb:hover {
+    transform: scale(1.05);
+}
+
+.city-thumb img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.city-thumb h3 {
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.city-thumb p {
+    padding: 0 10px 10px;
+    margin: 0;
+    color: #666;
+}
+
+.subdistrict-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.subdistrict-thumb {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.subdistrict-thumb:hover {
+    transform: scale(1.05);
+}
+
+.subdistrict-thumb img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.subdistrict-thumb h3 {
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.subdistrict-thumb p {
+    padding: 0 10px 10px;
+    margin: 0;
+    color: #666;
+}
+
+.village-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.village-thumb {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.village-thumb:hover {
+    transform: scale(1.05);
+}
+
+.village-thumb img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.village-thumb h3 {
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.village-thumb p {
+    padding: 0 10px 10px;
+    margin: 0;
+    color: #666;
+}
+
+.zigzag-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.zigzag-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.zigzag-item.left {
+    flex-direction: row;
+}
+
+.zigzag-item.right {
+    flex-direction: row-reverse;
+}
+
+.zigzag-item img {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.zigzag-item .content {
+    flex: 1;
+    padding: 20px;
+}
+
+.zigzag-item h4 {
+    margin-top: 0;
+    color: #4CAF50;
+}
+
+.zigzag-item p {
+    line-height: 1.6;
+}
+
+#city-btn {
+    display: block;
+    margin: 20px auto;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#city-btn:hover {
+    background-color: #1976D2;
+}
+
+#welcome-btn {
+    display: block;
+    margin: 20px auto;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-btn {
+    display: block;
+    margin: 20px auto;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #1976D2;
+}
+
+/* Mobile Styles (up to 480px) */
+@media (max-width: 480px) {
+    body {
+        padding-top: 120px;
+    }
+
+    header {
+        padding: 0.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-content {
+        gap: 5px;
+    }
+
+    .logo {
+        height: 30px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    #top-nav {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    #top-nav a {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    #cover {
+        height: 50vh;
+        padding: 10px;
+    }
+
+    .cover-content {
+        padding: 10px;
+    }
+
+    .cover-content h2 {
+        font-size: 1.8em;
+    }
+
+    .cover-content p {
+        font-size: 1em;
+    }
+
+    #enter-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .village-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .village-thumb img {
+        height: 150px;
+    }
+
+    .village-thumb h3 {
+        font-size: 1em;
+    }
+
+    .zigzag-item {
+        flex-direction: column !important;
+    }
+
+    .zigzag-item img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .zigzag-item .content {
+        padding: 10px;
+    }
+
+    #city-btn, #welcome-btn, .back-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+/* Tablet Styles (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    header {
+        padding: 0.75rem;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    #top-nav {
+        gap: 10px;
+    }
+
+    #top-nav a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    #cover {
+        height: 70vh;
+    }
+
+    .cover-content h2 {
+        font-size: 2.2em;
+    }
+
+    .cover-content p {
+        font-size: 1.1em;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .village-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .village-thumb img {
+        height: 180px;
+    }
+
+    .zigzag-item {
+        flex-direction: column;
+    }
+
+    .zigzag-item img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .zigzag-item .content {
+        padding: 15px;
+    }
+
+    #city-btn, #welcome-btn, .back-btn {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+}
+
+/* Desktop Styles (769px and above) */
+@media (min-width: 769px) {
+    .village-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .zigzag-item {
+        flex-direction: row;
+    }
+
+    .zigzag-item.left {
+        flex-direction: row;
+    }
+
+    .zigzag-item.right {
+        flex-direction: row-reverse;
+    }
+
+    .zigzag-item img {
+        width: 50%;
+        height: 300px;
+    }
+}

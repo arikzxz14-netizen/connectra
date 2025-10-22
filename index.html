@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONNECTRA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- FAV ICON -->
+ <link rel="shortcut icon" href="./images/LOGO WEBSITE.jpeg" type="image/x-icon">
+<body>
+    <header>
+        <div class="header-content">
+            <img src="./images/header.jpeg" alt="Logo CONNECTRA" class="logo">
+            <h1>CONNECTRA</h1>
+        </div>
+        <nav id="top-nav">
+            <a onclick="showSection('dashboard')">Dashboard</a>
+            <a onclick="showSection('umkm')">UMKM</a>
+            <a onclick="showSection('contact')">Kontak</a>
+            <a onclick="showSection('about')">Tentang Saya</a>
+        </nav>
+    </header>
+
+    <section id="dashboard">
+        <div id="cover">
+            <div class="cover-content">
+                <h2>Selamat Datang di Dashboard</h2>
+                <p>Ini adalah halaman utama website kami. Jelajahi lebih lanjut dengan menu di atas.</p>
+                <button id="enter-btn" onclick="showSection('umkm')">Masuk</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" style="display: none;">
+        <main>
+            <h2>Tentang Saya</h2>
+            <p>Connectra (Connected Entrepreneurship Area) adalah website katalog digital yang berisi kumpulan data dan profil UMKM di Kota Serang. Platform ini menampilkan informasi usaha berdasarkan kecamatan dan desa, sehingga memudahkan masyarakat untuk menemukan produk lokal sesuai lokasi.</p>
+            <button id="welcome-btn" class="back-btn" onclick="showSection('dashboard')">Kembali ke Dashboard</button>
+        </main>
+    </section>
+
+    <section id="contact" style="display: none;">
+        <main>
+            <h2>Hubungi Kami</h2>
+            <p>Email: contact@websitegabut.com</p>
+            <p>Telepon: 123-456-7890</p>
+            <button id="welcome-btn" class="back-btn" onclick="showSection('dashboard')">Kembali ke Dashboard</button>
+        </main>
+    </section>
+
+    <section id="umkm" style="display: none;">
+        <main>
+            <h2>Pilih Kota UMKM</h2>
+            <div class="city-grid">
+                <div class="city-thumb" onclick="showSubDistricts()">
+                    <img src="./images/kota serang.jpg" alt="Kota UMKM">
+                    <h3>KOTA SERANG</h3>
+                    <p>Pilih kota untuk melihat kecamatan.</p>
+                </div>
+            </div>
+
+            <div id="subdistricts" style="display: none;">
+                <h2>Daftar Kecamatan</h2>
+                <div class="subdistrict-grid">
+                    <div class="subdistrict-thumb" onclick="showVillages('kecamatan1')">
+                        <img src="./images/kec 1.jpg" alt="Kecamatan 1">
+                        <h3>KECAMATAN CIPOCOK JAYA</h3>
+                        <p>KLIK DISINI</p>
+                    </div>
+                    <div class="subdistrict-thumb" onclick="showVillages('kecamatan2')">
+                        <img src="./images/download (1).jpg" alt="Kecamatan 2">
+                        <h3>KECAMATAN WALANTAKA</h3>
+                        <p>KLIK DISINI</p>
+                    </div>
+                    <div class="subdistrict-thumb" onclick="showVillages('kecamatan3')">
+                        <img src="./images/download (2).jpg" alt="Kecamatan 3">
+                        <h3>KECAMATAN CURUG</h3>
+                        <p>KLIK DISINI</p>
+                    </div>
+                    <div class="subdistrict-thumb" onclick="showVillages('kecamatan4')">
+                        <img src="./images/images (2).jpg" alt="Kecamatan 4">
+                        <h3>KECAMATAN KASEMEN</h3>
+                        <p>KLIK DISISNI</p>
+                    </div>
+                    <div class="subdistrict-thumb" onclick="showVillages('kecamatan5')">
+                        <img src="./images/images (4).jpg" alt="Kecamatan 5">
+                        <h3>KECAMATAN TAKTAKAN</h3>
+                        <p>KLLIK DISINI</p>
+                    </div>
+                    <div class="subdistrict-thumb" onclick="showVillages('kecamatan6')">
+                        <img src="./images/images (5).jpg" alt="Kecamatan 6">
+                        <h3>KECAMATAN SERANG</h3>
+                        <p>KLIK DISNI</p>
+                    </div>
+                </div>
+                <button id="back-to-city" class="back-btn" onclick="hideSubDistricts()">Kembali ke Dashboard</button>
+            </div>
+
+            <div id="villages-kecamatan1" style="display: none;">
+                <h2>Daftar Desa di CIPOCOK</h2>
+                <div class="village-grid">
+                    <div class="village-thumb" onclick="showVillageDetail('cipocok1')">
+                        <img src="./images/placeholder.jpg" alt="Cipocok Desa 1">
+                        <h3>DESA CIPOCOK JAYA</h3>
+                        <p>Deskripsi singkat Cipocok Desa 1.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('cipocok2')">
+                        <img src="./images/placeholder.jpg" alt="Cipocok Desa 2">
+                        <h3>DESA BANJARAGUNG</h3>
+                        <p>Deskripsi singkat Cipocok Desa 2.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('cipocok3')">
+                        <img src="./images/placeholder.jpg" alt="Cipocok Desa 3">
+                        <h3>DESA BANJARSARI</h3>
+                        <p>Deskripsi singkat Cipocok Desa 3.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('cipocok4')">
+                        <img src="./images/placeholder.jpg" alt="Cipocok Desa 4">
+                        <h3>DESA PENANCANGAN</h3>
+                        <p>Deskripsi singkat Cipocok Desa 4.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('cipocok5')">
+                        <img src="./images/placeholder.jpg" alt="Cipocok Desa 5">
+                        <h3>DESA KARUNDANG</h3>
+                        <p>Deskripsi singkat Cipocok Desa 5.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('cipocok6')">
+                        <img src="./images/placeholder.jpg" alt="Cipocok Desa 6">
+                        <h3>DESA TEMBONG</h3>
+                        <p>Deskripsi singkat Cipocok Desa 6.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('cipocok7')">
+                        <img src="./images/placeholder.jpg" alt="Cipocok Desa 7">
+                        <h3>DESA DALUNG</h3>
+                        <p>Deskripsi singkat Cipocok Desa 7.</p>
+                    </div>
+                </div>
+                <button id="back-to-subdistricts" class="back-btn" onclick="hideVillages()">Kembali ke Dashboard</button>
+            </div>
+
+            <div id="villages-kecamatan2" style="display: none;">
+                <h2>Daftar Desa di WALANTAKA</h2>
+                <div class="village-grid">
+                    <div class="village-thumb" onclick="showVillageDetail('walantaka1')">
+                        <img src="./images/placeholder.jpg" alt="Walanta Desa 1">
+                        <h3>DESA CIGOONG</h3>
+                        <p>Deskripsi singkat Walanta Desa 1.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('walantaka2')">
+                        <img src="./images/placeholder.jpg" alt="Walanta Desa 2">
+                        <h3>DESA KALODRAN</h3>
+                        <p>Deskripsi singkat Walanta Desa 2.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('walantaka3')">
+                        <img src="./images/placeholder.jpg" alt="Walanta Desa 3">
+                        <h3>DESA KAPUREN</h3>
+                        <p>Deskripsi singkat Walanta Desa 3.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('walantaka5')">
+                        <img src="./images/placeholder.jpg" alt="Walanta Desa 5">
+                        <h3>DESA KIARA</h3>
+                        <p>Deskripsi singkat Walanta Desa 5.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('walantaka6')">
+                        <img src="./images/placeholder.jpg" alt="Walanta Desa 6">
+                        <h3>DESA LEBAKWANGI</h3>
+                        <p>Deskripsi singkat Walanta Desa 6.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('walantaka7')">
+                        <img src="./images/placeholder.jpg" alt="Walanta Desa 7">
+                        <h3>DESA NYAPAH</h3>
+                        <p>Deskripsi singkat Walanta Desa 7.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('walantaka8')">
+                        <img src="./images/placeholder.jpg" alt="Walanta Desa 8">
+                        <h3>DESA PABUARAN</h3>
+                        <p>Deskripsi singkat Walanta Desa 8.</p>
+                    </div>
+                    
+                </div>
+                <button id="back-to-subdistricts" class="back-btn" onclick="hideVillages()">Kembali ke Dashboard</button>
+            </div>
+
+            <div id="villages-kecamatan3" style="display: none;">
+                <h2>Daftar Desa di CURUG</h2>
+                <div class="village-grid">
+                    <div class="village-thumb" onclick="showVillageDetail('curug1')">
+                        <img src="./images/placeholder.jpg" alt="Curug Desa 1">
+                        <h3>DESA CILAKU</h3>
+                        <p>Deskripsi singkat Curug Desa 1.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('curug2')">
+                        <img src="./images/placeholder.jpg" alt="Curug Desa 2">
+                        <h3>DESA CIPETE</h3>
+                        <p>Deskripsi singkat Curug Desa 2.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('curug3')">
+                        <img src="./images/placeholder.jpg" alt="Curug Desa 3">
+                        <h3>DESA TINGGAR</h3>
+                        <p>Deskripsi singkat Curug Desa 3.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('curug4')">
+                        <img src="./images/placeholder.jpg" alt="Curug Desa 4">
+                        <h3>DESA CURUG MANIS</h3>
+                        <p>Deskripsi singkat Curug Desa 4.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('curug5')">
+                        <img src="./images/placeholder.jpg" alt="Curug Desa 5">
+                        <h3>DESA KEMANISAN</h3>
+                        <p>Deskripsi singkat Curug Desa 5.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('curug6')">
+                        <img src="./images/placeholder.jpg" alt="Curug Desa 6">
+                        <h3>DESA PANCALAKSANA</h3>
+                        <p>Deskripsi singkat Curug Desa 6.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('curug7')">
+                        <img src="./images/placeholder.jpg" alt="Curug Desa 7">
+                        <h3>DESA SUKAJAYA</h3>
+                        <p>Deskripsi singkat Curug Desa 7.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('curug8')">
+                        <img src="./images/placeholder.jpg" alt="Curug Desa 8">
+                        <h3>DESA SUKALAKSANA</h3>
+                        <p>Deskripsi singkat Curug Desa 8.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('curug9')">
+                        <img src="./images/placeholder.jpg" alt="Curug Desa 9">
+                        <h3>DESA SUKAWANA</h3>
+                        <p>Deskripsi singkat Curug Desa 9.</p>
+                    </div>
+                </div>
+                <button id="back-to-subdistricts" class="back-btn" onclick="hideVillages()">Kembali ke Dashboard</button>
+            </div>
+
+            <div id="villages-kecamatan4" style="display: none;">
+                <h2>Daftar Desa di KASEMEN</h2>
+                <div class="village-grid">
+                    <div class="village-thumb" onclick="showVillageDetail('kasemen1')">
+                        <img src="./images/placeholder.jpg" alt="Kasemen Desa 1">
+                        <h3>DESA BANTEN</h3>
+                        <p>Deskripsi singkat Kasemen Desa 1.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('kasemen2')">
+                        <img src="./images/placeholder.jpg" alt="Kasemen Desa 2">
+                        <h3>DESA BENDUNG</h3>
+                        <p>Deskripsi singkat Kasemen Desa 2.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('kasemen3')">
+                        <img src="./images/placeholder.jpg" alt="Kasemen Desa 3">
+                        <h3>DESA KASEMEN</h3>
+                        <p>Deskripsi singkat Kasemen Desa 3.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('kasemen4')">
+                        <img src="./images/placeholder.jpg" alt="Kasemen Desa 4">
+                        <h3>DESA KILASAH</h3>
+                        <p>Deskripsi singkat Kasemen Desa 4.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('kasemen5')">
+                        <img src="./images/placeholder.jpg" alt="Kasemen Desa 5">
+                        <h3>DESA MARGALUYU</h3>
+                        <p>Deskripsi singkat Kasemen Desa 5.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('kasemen6')">
+                        <img src="./images/placeholder.jpg" alt="Kasemen Desa 6">
+                        <h3>DESA MESJID PRIAYI</h3>
+                        <p>Deskripsi singkat Kasemen Desa 6.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('kasemen7')">
+                        <img src="./images/placeholder.jpg" alt="Kasemen Desa 7">
+                        <h3>DESA SAWAH LUHUR</h3>
+                        <p>Deskripsi singkat Kasemen Desa 7.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('kasemen8')">
+                        <img src="./images/placeholder.jpg" alt="Kasemen Desa 8">
+                        <h3>DESA TERUMBU</h3>
+                        <p>Deskripsi singkat Kasemen Desa 8.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('kasemen9')">
+                        <img src="./images/placeholder.jpg" alt="Kasemen Desa 9">
+                        <h3>DESA WARUNG JAUD</h3>
+                        <p>Deskripsi singkat Kasemen Desa 9.</p>
+                    </div>
+                </div>
+                <button id="back-to-subdistricts" class="back-btn" onclick="hideVillages()">Kembali ke Dashboard</button>
+            </div>
+
+            <div id="villages-kecamatan5" style="display: none;">
+                <h2>Daftar Desa di TAKTAKAN</h2>
+                <div class="village-grid">
+                    <div class="village-thumb" onclick="showVillageDetail('taktakan1')">
+                        <img src="./images/placeholder.jpg" alt="Taktakan Desa 1">
+                        <h3>DESA CIBENDUNG</h3>
+                        <p>Deskripsi singkat Taktakan Desa 1.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('taktakan2')">
+                        <img src="./images/placeholder.jpg" alt="Taktakan Desa 2">
+                        <h3>DESA CILOWONG</h3>
+                        <p>Deskripsi singkat Taktakan Desa 2.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('taktakan3')">
+                        <img src="./images/placeholder.jpg" alt="Taktakan Desa 3">
+                        <h3>DESA DRANGONG</h3>
+                        <p>Deskripsi singkat Taktakan Desa 3.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('taktakan4')">
+                        <img src="./images/placeholder.jpg" alt="Taktakan Desa 4">
+                        <h3>DESA KALANGANYAR</h3>
+                        <p>Deskripsi singkat Taktakan Desa 4.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('taktakan5')">
+                        <img src="./images/placeholder.jpg" alt="Taktakan Desa 5">
+                        <h3>DESA KURANJI</h3>
+                        <p>Deskripsi singkat Taktakan Desa 5.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('taktakan6')">
+                        <img src="./images/placeholder.jpg" alt="Taktakan Desa 6">
+                        <h3>DESA LIALANG</h3>
+                        <p>Deskripsi singkat Taktakan Desa 6.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('taktakan7')">
+                        <img src="./images/placeholder.jpg" alt="Taktakan Desa 7">
+                        <h3>DESA PANCUR</h3>
+                        <p>Deskripsi singkat Taktakan Desa 7.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('taktakan8')">
+                        <img src="./images/placeholder.jpg" alt="Taktakan Desa 8">
+                        <h3>DESA PANGGUNGJATI</h3>
+                        <p>Deskripsi singkat Taktakan Desa 8.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('taktakan9')">
+                        <img src="./images/placeholder.jpg" alt="Taktakan Desa 9">
+                        <h3>DESA SEPANG</h3>
+                        <p>Deskripsi singkat Taktakan Desa 9.</p>
+                    </div>
+                </div>
+                <button id="back-to-subdistricts" class="back-btn" onclick="hideVillages()">Kembali ke Dashboard</button>
+            </div>
+
+            <div id="villages-kecamatan6" style="display: none;">
+                <h2>Daftar Desa di SERANG</h2>
+                <div class="village-grid">
+                    <div class="village-thumb" onclick="showVillageDetail('serang1')">
+                        <img src="./images/placeholder.jpg" alt="Serang Desa 1">
+                        <h3>DESA CIMUNCANG</h3>
+                        <p>Deskripsi singkat Serang Desa 1.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('serang2')">
+                        <img src="./images/placeholder.jpg" alt="Serang Desa 2">
+                        <h3>DESA UNYUR</h3>
+                        <p>Deskripsi singkat Serang Desa 2.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('serang3')">
+                        <img src="./images/placeholder.jpg" alt="Serang Desa 3">
+                        <h3>DESA KOTA BARU</h3>
+                        <p>Deskripsi singkat Serang Desa 3.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('serang4')">
+                        <img src="./images/placeholder.jpg" alt="Serang Desa 4">
+                        <h3>DESA LOPANG</h3>
+                        <p>Deskripsi singkat Serang Desa 4.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('serang5')">
+                        <img src="./images/placeholder.jpg" alt="Serang Desa 5">
+                        <h3>DESA KAGUNGAN</h3>
+                        <p>Deskripsi singkat Serang Desa 5.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('serang6')">
+                        <img src="./images/placeholder.jpg" alt="Serang Desa 6">
+                        <h3>DESA LONTARBARU</h3>
+                        <p>Deskripsi singkat Serang Desa 6.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('serang7')">
+                        <img src="./images/placeholder.jpg" alt="Serang Desa 7">
+                        <h3>DESA KALIGANDU</h3>
+                        <p>Deskripsi singkat Serang Desa 7.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('serang8')">
+                        <img src="./images/placeholder.jpg" alt="Serang Desa 8">
+                        <h3>DESA CIPARE</h3>
+                        <p>Deskripsi singkat Serang Desa 8.</p>
+                    </div>
+                    <div class="village-thumb" onclick="showVillageDetail('serang9')">
+                        <img src="./images/placeholder.jpg" alt="Serang Desa 9">
+                        <h3>DESA SUMUR PECUNG</h3>
+                        <p>Deskripsi singkat Serang Desa 9.</p>
+                    </div>
+                </div>
+                <button id="back-to-subdistricts" class="back-btn" onclick="hideVillages()">Kembali ke Dashboard</button>
+            </div>
+
+            <div id="village-detail" style="display: none;">
+                <h3 id="village-title">Desa 1</h3>
+                <div class="zigzag-container" id="zigzag-content">
+                    <div class="zigzag-item left">
+                        <img src="./images/placeholder.jpg" alt="Detail 1">
+                        <div class="content">
+                            <h4>Detail 1</h4>
+                            <p>Penjelasan detail 1 untuk Desa.</p>
+                        </div>
+                    </div>
+                    <div class="zigzag-item right">
+                        <img src="./images/placeholder.jpg" alt="Detail 2">
+                        <div class="content">
+                            <h4>Detail 2</h4>
+                            <p>Penjelasan detail 2 untuk Desa.</p>
+                        </div>
+                    </div>
+                    <div class="zigzag-item left">
+                        <img src="./images/placeholder.jpg" alt="Detail 3">
+                        <div class="content">
+                            <h4>Detail 3</h4>
+                            <p>Penjelasan detail 3 untuk Desa.</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="back-to-villages" class="back-btn" onclick="hideVillageDetail()">Kembali ke Dashboard</button>
+            </div>
+        </main>
+    </section>
+
+    <script>
+        let currentSubdistrictId = null;
+
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function showSubDistricts() {
+            document.querySelector('.city-grid').style.display = 'none';
+            document.getElementById('subdistricts').style.display = 'block';
+        }
+
+        function hideSubDistricts() {
+            document.getElementById('subdistricts').style.display = 'none';
+            document.querySelector('.city-grid').style.display = 'grid';
+        }
+
+        function showVillages(subdistrictId) {
+            currentSubdistrictId = subdistrictId;
+            document.getElementById('subdistricts').style.display = 'none';
+            document.getElementById('villages-' + subdistrictId).style.display = 'block';
+        }
+
+        function hideVillages() {
+            for (let i = 1; i <= 6; i++) {
+                document.getElementById('villages-kecamatan' + i).style.display = 'none';
+            }
+            document.getElementById('subdistricts').style.display = 'block';
+        }
+
+        function showVillageDetail(villageId) {
+            document.getElementById('villages-' + currentSubdistrictId).style.display = 'none';
+            document.getElementById('village-detail').style.display = 'block';
+
+            let title = document.getElementById('village-title');
+            let content = document.getElementById('zigzag-content');
+
+            if (villageId === 'cipocok1') {
+                title.textContent = 'DESA CIPOCOK JAYA';
+                content.innerHTML = `
+                    <table style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 2px solid #333;">
+                        <tr style="background-color: #f2f2f2;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Nama UMKM</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Naufan Putra</td>
+                        </tr>
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Alamat</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Ruko Citra Gading Blok FR No.7, Kelurahan Cipocok Jaya, Kota Serang, Banten.</td>
+                        </tr>
+                        <tr style="background-color: #f2f2f2;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Produk dan Harga</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                Keripik belinjo, rengginang mentah.<br>
+                                - Emping Belinjo (raw): Rp 40.000<br>
+                                - Emping Balado 250g: Rp 27.000<br>
+                                - Rengginang Mentah: Rp 27.000
+                            </td>
+                        </tr>
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Link</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://share.google/UKaEeAPN39gyUtXKD" target="_blank">Kunjungi Website</a></td>
+                        </tr>
+                    </table>
+                `;
+            } else if (villageId === 'cipocok7') {
+                title.textContent = 'DESA DALUNG';
+                content.innerHTML = `
+                    <table style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 2px solid #333;">
+                        <tr style="background-color: #f2f2f2;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Nama UMKM</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">UMKM Ubi Kremes Dalung</td>
+                        </tr>
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Alamat</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Kelurahan Dalung, Kecamatan Cipocok Jaya, Kota Serang.</td>
+                        </tr>
+                        <tr style="background-color: #f2f2f2;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Produk dan Harga</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Olahan snack “ubi kremes” (harga spesifik tidak disebutkan).</td>
+                        </tr>
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Link</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://share.google/UKaEeAPN39gyUtXKD" target="_blank">Kunjungi Website</a></td>
+                        </tr>
+                    </table>
+                `;
+            } else if (villageId === 'cipocok4') {
+                title.textContent = 'DESA PENANCANGAN';
+                content.innerHTML = `
+                    <table style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 2px solid #333;">
+                        <tr style="background-color: #f2f2f2;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Nama UMKM</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">PT Bilvie Jaya Mandiri</td>
+                        </tr>
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Alamat</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Lingkungan Kemang RT 01/02, Kelurahan Panancangan, Kecamatan Cipocok Jaya, Kota Serang.</td>
+                        </tr>
+                        <tr style="background-color: #f2f2f2;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Produk dan Harga</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Sate Bandeng – Rp 40.000.</td>
+                        </tr>
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Link</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://www.karyakreatifindonesia.co.id/umkm/pt-bilvie-jaya-mandiri" target="_blank">Kunjungi Website</a></td>
+                        </tr>
+                    </table>
+                `;
+            } else if (villageId === 'walantaka1') {
+                title.textContent = 'DESA CIGOONG';
+                content.innerHTML = `
+                    <table style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 2px solid #333;">
+                        <tr style="background-color: #f2f2f2;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Nama UMKM</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Mozarella Corndog Walantaka</td>
+                        </tr>
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Alamat</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Kecamatan Walantaka, Cigo'ong (sekitar Kota Serang).</td>
+                        </tr>
+                        <tr style="background-color: #f2f2f2;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Produk dan Harga</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Menyajikan berbagai varian corndog dengan isian mozarella.</td>
+                        </tr>
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Link</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://gofood.co.id/serang/restaurant/mozarella-corndog-walantaka-kec-walantaka-cigo-ong-2a759b4e-4a65-4f8d-96ae-27b117b86eb6" target="_blank">Kunjungi GoFood</a></td>
+                        </tr>
+                    </table>
+                `;
+            } else if (villageId === 'walantaka3') {
+                title.textContent = 'DESA KAPUREN';
+                content.innerHTML = `
+                    <table style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 2px solid #333;">
+                        <tr style="background-color: #f2f2f2;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Nama UMKM</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Ikan & Ayam Bakar Sambal Honje</td>
+                        </tr>
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Alamat</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Kepuren Residen, Walantaka, Kota Serang.</td>
+                        </tr>
+                        <tr style="background-color: #f2f2f2;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Produk dan Harga</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                Menyajikan beragam hidangan bakar, seperti: Bandeng Bakar Tulang Lunak Sambal Honje, Cumi Bakar Sambal Honje, Gurame Bakar Sambal Honje, Ikan Kembung Bakar Sambal Honje, Ayam Bakar Sambal Honje, Pindang Koneng.
+                            </td>
+                        </tr>
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Link</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://gofood.co.id/serang/restaurant/ikan-ayam-bakar-sambal-honje-kepuren-residen-d67edcf4-3633-4403-9a84-ca85b3987d50" target="_blank">Kunjungi GoFood</a></td>
+                        </tr>
+                    </table>
+                `;
+            } else if (villageId === 'walantaka2') {
+                title.textContent = 'DESA KALODRAN';
+                content.innerHTML = `
+                    <table style="width: 100%; border-collapse: collapse; margin: 20px 0; border: 2px solid #333;">
+                        <tr style="background-color: #f2f2f2;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Nama UMKM</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">KEDAI MEY LIEN DA</td>
+                        </tr>
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Alamat</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Ruko Nirwana, Kalodran, Kota Serang.</td>
+                        </tr>
+                        <tr style="background-color: #f2f2f2;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Produk dan Harga</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;">Aneka makanan yang ditawarkan di kedai ini beragam. Untuk detail menu, dapat dilihat langsung melalui tautan GoFood.</td>
+                        </tr>
+                        <tr style="background-color: #ffffff;">
+                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">Link</td>
+                            <td style="padding: 10px; border: 1px solid #ddd;"><a href="https://gofood.co.id/serang/restaurant/kedai-mey-lien-da-kalodran-serang-ruko-nirwana-909e01c6-7728-44b6-b251-828083f47e10" target="_blank">Kunjungi GoFood</a></td>
+                        </tr>
+                    </table>
+                `;
+            } else {
+                title.textContent = 'Desa ' + villageId;
+                content.innerHTML = `
+                    <div class="zigzag-item left">
+                        <img src="./images/placeholder.jpg" alt="Detail 1">
+                        <div class="content">
+                            <h4>Detail 1</h4>
+                            <p>Penjelasan detail 1 untuk Desa.</p>
+                        </div>
+                    </div>
+                    <div class="zigzag-item right">
+                        <img src="./images/placeholder.jpg" alt="Detail 2">
+                        <div class="content">
+                            <h4>Detail 2</h4>
+                            <p>Penjelasan detail 2 untuk Desa.</p>
+                        </div>
+                    </div>
+                    <div class="zigzag-item left">
+                        <img src="./images/placeholder.jpg" alt="Detail 3">
+                        <div class="content">
+                            <h4>Detail 3</h4>
+                            <p>Penjelasan detail 3 untuk Desa.</p>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        function hideVillageDetail() {
+            document.getElementById('village-detail').style.display = 'none';
+            document.getElementById('villages-' + currentSubdistrictId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
